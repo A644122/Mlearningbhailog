@@ -43,16 +43,30 @@
             font-size:8vh;
             font-weight: 400;
         }
-       
-       
+       a{
+        margin: auto 50%;
+        font-size: 5vh;
+        text-decoration: none;
+       }
+       a:focus:hover{
+        color: hsl(90, 100%, 47%);
+        text-decoration:underline;
+       }
+        body,h4,h5{
+        text-align: center;
+       }
        
     </style>
 </head>
 <body>
+    <a href="https://www.google.co.in/">Google</a>
     <h1>CTB {Capturing target bubbling}</h1>
+    <h4>Capturing -it means upwards To Downwards  jata hai<h4>
+        <h5>bubbling -it means Downward to upward jata hai<h5>
    <div id="Grandfather">
     Grandfather
     <div id="Father">
+       
         Father
         <div id="Children">
             children
@@ -69,14 +83,19 @@
     document.querySelector('#Grandfather').addEventListener('click',(e)=>{
         // alert("This is my Grandfather here")
 console.log("Here Click  GrandFather ")
+        e.stopPropagation();
+
 
     },true);
     document.querySelector("#Father").addEventListener('click',(e)=>{
         // alert("This is my Father here click")
-        console.log(" Click Here Father")
+        console.log(" Click Here Father");
+        e.stopPropagation();
     },true);
     document.querySelector("#Children").addEventListener('click',(e)=>{
         console.log("Click here Children");
+        // e.stopPropagation();
+
     },true)
    </script>
     
