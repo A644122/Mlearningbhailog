@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            
+        }
+
+        #Grandfather{
+           margin: 30px 20px;
+            background-color:rgb(5, 139, 188);
+            border: 2px solid black;
+            width: 500px;
+            height: 400px;
+            font-size: 5vh;
+        }
+        #Father{
+           margin: 30px 20px;
+            background-color:rgb(221, 12, 12);
+            border: 2px solid rgb(168, 183, 3);
+            width: 200px;
+            height: 200px;
+        }
+        #Children{
+           margin: 30px 20px;
+            background-color:rgb(247, 172, 172);
+            border: 2px solid rgb(146, 7, 7);
+            width: 120px;
+            height: 120px;
+        }
+        h1{
+            text-align: center;
+            font-size:8vh;
+            font-weight: 400;
+        }
+       
+       
+       
+    </style>
+</head>
+<body>
+    <h1>CTB {Capturing target bubbling}</h1>
+   <div id="Grandfather">
+    Grandfather
+    <div id="Father">
+        Father
+        <div id="Children">
+            children
+
+        </div>
+    
+    </div>
+    
+   </div>
+   
+   
+   
+   <script>
+    document.querySelector('#Grandfather').addEventListener('click',(e)=>{
+        // alert("This is my Grandfather here")
+console.log("Here Click  GrandFather ")
+
+    },true);
+    document.querySelector("#Father").addEventListener('click',(e)=>{
+        // alert("This is my Father here click")
+        console.log(" Click Here Father")
+    },true);
+    document.querySelector("#Children").addEventListener('click',(e)=>{
+        console.log("Click here Children");
+    },true)
+   </script>
+    
+
+</body>
+</html>
